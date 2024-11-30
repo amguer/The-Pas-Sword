@@ -1,0 +1,787 @@
+fileFormatVersion: 2
+guid: 294b2cf181b9d6c46811eccb0eb56a44
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 144
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 65, y: 100}
+        - {x: 41, y: 100}
+        - {x: -72, y: 39}
+        - {x: -72, y: -99}
+        - {x: -68, y: -100}
+        - {x: -36, y: -100}
+        - {x: 44, y: -57}
+        - {x: 72, y: -40}
+        - {x: 72, y: 97}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762e027f80e20d8458986f167d578c4d
+      internalID: 899941693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 600
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -72, y: 100}
+        - {x: -72, y: -41}
+        - {x: 37, y: -100}
+        - {x: 69, y: -100}
+        - {x: 72, y: -98}
+        - {x: 72, y: 40}
+        - {x: -46, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf315c39939955e498f4fd87b64a49a2
+      internalID: 1059315315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 600
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 40, y: 100}
+        - {x: -72, y: 39}
+        - {x: -72, y: -99}
+        - {x: -69, y: -100}
+        - {x: -33, y: -100}
+        - {x: 72, y: -42}
+        - {x: 72, y: 98}
+        - {x: 65, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b36cc22ac98754abca551d6e6531e6
+      internalID: -490825005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 600
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -72, y: 100}
+        - {x: -72, y: -49}
+        - {x: -38, y: -69}
+        - {x: 14, y: -100}
+        - {x: 72, y: -100}
+        - {x: 72, y: 64}
+        - {x: -41, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52760c45a3d2274a978a227da1be6a5
+      internalID: 1213247333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 600
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62aa1acfd2d848844918fd39293dc0f1
+      internalID: -595728059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 600
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36e375de7de18f46a177fea3c1d7285
+      internalID: 1477606586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f638149db8e0b4a9f0333a3ffb0fea
+      internalID: 985983796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 400
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f290042820d20439aa239b6d1a1ced
+      internalID: -1529422735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 400
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cb71d042997d8469b0dfc6fb10bee2
+      internalID: -620489697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 400
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a77b4b48bb68249a208794b076b9a5
+      internalID: 108925961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 400
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8419612f123af646b6ef665220bf12f
+      internalID: 1918916479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 400
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -70, y: 100}
+        - {x: -72, y: 96}
+        - {x: -72, y: -43}
+        - {x: 33, y: -100}
+        - {x: 72, y: -100}
+        - {x: 72, y: 49}
+        - {x: -39, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077f68e4e5bba6f4ba3ed3d10a7fc851
+      internalID: -1616997447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33798d24074a01b4d88ee732f53a8e75
+      internalID: 631824353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_13
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 200
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e81a27595e08e64dbec2a1a2f2e06d0
+      internalID: -1038491159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_14
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 200
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e320d6c09e2658d43991387e695bbfe1
+      internalID: -633992506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_15
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 200
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f31c198adda7a543a2ca313fc7af66f
+      internalID: -478360481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_16
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 200
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 48, y: 100}
+        - {x: -2, y: 75}
+        - {x: -72, y: 39}
+        - {x: -72, y: -100}
+        - {x: -43, y: -100}
+        - {x: 72, y: -48}
+        - {x: 72, y: 99}
+        - {x: 67, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aaef400aa914bd42ab023200b38e1ef
+      internalID: -1939486268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 200
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -34, y: 100}
+        - {x: -67, y: 100}
+        - {x: -72, y: 97}
+        - {x: -72, y: -40}
+        - {x: 7, y: -88}
+        - {x: 44, y: -100}
+        - {x: 69, y: -100}
+        - {x: 72, y: -95}
+        - {x: 72, y: 38}
+        - {x: 70, y: 40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e9fb5b09ca05844be5670ac9818be7
+      internalID: 1684674163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 44, y: 100}
+        - {x: -72, y: 40}
+        - {x: -72, y: -99}
+        - {x: -69, y: -100}
+        - {x: -38, y: -100}
+        - {x: 72, y: -44}
+        - {x: 72, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e476aac395e4c42b165b1de250068f
+      internalID: -694144924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: 100}
+        - {x: -72, y: 97}
+        - {x: -72, y: -52}
+        - {x: 22, y: -100}
+        - {x: 72, y: -100}
+        - {x: 72, y: 47}
+        - {x: -44, y: 100}
+      physicsShape:
+      - - {x: -63, y: 100}
+        - {x: -72, y: 97}
+        - {x: -72, y: -52}
+        - {x: 22, y: -100}
+        - {x: 72, y: -100}
+        - {x: 72, y: 47}
+        - {x: -44, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961790b66e666314fb7a98c3107023f9
+      internalID: 685177993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_20
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 38, y: 100}
+        - {x: -72, y: 45}
+        - {x: -72, y: -100}
+        - {x: -33, y: -100}
+        - {x: 72, y: -43}
+        - {x: 72, y: 98}
+        - {x: 67, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84dba6647232734789a7d141189094e
+      internalID: -1400705843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_21
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -67, y: 100}
+        - {x: -72, y: 98}
+        - {x: -72, y: -42}
+        - {x: 29, y: -100}
+        - {x: 72, y: -100}
+        - {x: 72, y: 40}
+        - {x: -36, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e54bca8ef82964dbfbed4444c46f62
+      internalID: 850756806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 44, y: 100}
+        - {x: -58, y: 48}
+        - {x: -72, y: 39}
+        - {x: -72, y: -100}
+        - {x: -26, y: -100}
+        - {x: 72, y: -44}
+        - {x: 72, y: 98}
+        - {x: 66, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd1318a573778e46b344df5864712a9
+      internalID: 1852232159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thick_Brick_01-SE-144x200_23
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -72, y: 100}
+        - {x: -72, y: -40}
+        - {x: -26, y: -63}
+        - {x: 46, y: -100}
+        - {x: 72, y: -100}
+        - {x: 72, y: 41}
+        - {x: -51, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce64ca24a44c024d83b1f3864391846
+      internalID: -1590628188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Thick_Brick_01-SE-144x200_0: 899941693
+      Thick_Brick_01-SE-144x200_1: 1059315315
+      Thick_Brick_01-SE-144x200_10: 1918916479
+      Thick_Brick_01-SE-144x200_11: -1616997447
+      Thick_Brick_01-SE-144x200_12: 631824353
+      Thick_Brick_01-SE-144x200_13: -1038491159
+      Thick_Brick_01-SE-144x200_14: -633992506
+      Thick_Brick_01-SE-144x200_15: -478360481
+      Thick_Brick_01-SE-144x200_16: -1939486268
+      Thick_Brick_01-SE-144x200_17: 1684674163
+      Thick_Brick_01-SE-144x200_18: -694144924
+      Thick_Brick_01-SE-144x200_19: 685177993
+      Thick_Brick_01-SE-144x200_2: -490825005
+      Thick_Brick_01-SE-144x200_20: -1400705843
+      Thick_Brick_01-SE-144x200_21: 850756806
+      Thick_Brick_01-SE-144x200_22: 1852232159
+      Thick_Brick_01-SE-144x200_23: -1590628188
+      Thick_Brick_01-SE-144x200_3: 1213247333
+      Thick_Brick_01-SE-144x200_4: -595728059
+      Thick_Brick_01-SE-144x200_5: 1477606586
+      Thick_Brick_01-SE-144x200_6: 985983796
+      Thick_Brick_01-SE-144x200_7: -1529422735
+      Thick_Brick_01-SE-144x200_8: -620489697
+      Thick_Brick_01-SE-144x200_9: 108925961
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

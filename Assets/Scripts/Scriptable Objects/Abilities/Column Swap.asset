@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a414c392da67be5468828ced930ad7cd, type: 3}
+  m_Name: Column Swap
+  m_EditorClassIdentifier: 
+  abilityName: Column Swap
+  cost: 50
+  tier: 1
+  type: {fileID: 11400000, guid: 4e9bc0af126b74040ac41201f2381dfe, type: 2}
+  icon: {fileID: 0}
+  pattern: {fileID: 11400000, guid: 8bab20641dd27574aa8c4d706eaeeb6f, type: 2}
+  effect: {fileID: 11400000, guid: 16e571dc8ab51d94b8834a95291a9eb1, type: 2}
+  description: Randomly swap letters in cell pattern.
