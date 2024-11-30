@@ -1,25 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyAIManager : MonoBehaviour
 {
-    [SerializeField] int level; // AI's ability variety is 2x their level
+    [SerializeField] Image characterPortrait;
+    int maxLevel = 3; // AI's ability variety is 2x their level
     private List<AbilitySO> hand = new List<AbilitySO>();
+    [SerializeField] private List<Sprite> portraits = new List<Sprite>();
+    [SerializeField] private List<string> names = new List<string>();
 
     private void OnEnable()
     {
-        GameManager.OnBeginGame += Initialize;
+        GameManager.OnNewBattle += GenerateNewAI;
     }
 
     private void OnDisable()
     {
-        GameManager.OnBeginGame -= Initialize;
+        GameManager.OnNewBattle -= GenerateNewAI;
     }
 
-    public void Initialize()
+    public void GenerateNewAI()
     {
-        int numOfAbilities = level * 2;
+        if (hand.Count > 0) hand.Clear();
+        int numOfAbilities = Random.Range(1, maxLevel) * 2;
         DeckManager deckManager = DeckManager.Instance;
         for(int i = 0; i < numOfAbilities; i++)
         {
@@ -34,6 +39,8 @@ public class EnemyAIManager : MonoBehaviour
             hand.Add(newAbility);
             Debug.Log(newAbility.name);
         }
+        GameManager.Instance.SetEnemyName(names[Random.Range(0, names.Count)]);
+        characterPortrait.sprite = portraits[Random.Range(0, portraits.Count)];
     }
 
     public void Play()

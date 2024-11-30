@@ -9,34 +9,15 @@ public class ThinkingDotsController : MonoBehaviour
     [SerializeField] RectTransform positionTwo;
     bool atPositionOne;
 
-    private void OnEnable()
+    public void Initialize()
     {
-        GameManager.OnEndTurn += SwitchPosition;
-        GameManager.OnWin += Disable;
-        GameManager.OnLose += Disable;
-    }
-
-    private void OnDisable()
-    {
-        GameManager.OnEndTurn -= SwitchPosition;
-        GameManager.OnWin -= Disable;
-        GameManager.OnLose -= Disable;
-    }
-
-    private void Start()
-    {
+        gameObject.SetActive(true);
         atPositionOne = true;
         transform.SetParent(positionOne);
         GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
     }
 
-
-    private void Disable()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void SwitchPosition()
+    public void SwitchPosition()
     {
         if(atPositionOne)
         {

@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject dialogueBoxBackDrop;
 
+    [SerializeField] private Image playerCharacterPortrait;
     [SerializeField] private TextMeshProUGUI playerNameText;
     [SerializeField] private TextMeshProUGUI playerCPText;
     [SerializeField] private TextMeshProUGUI enemyNameText;
@@ -29,6 +30,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button cancelButton;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button continueButton;
+    [SerializeField] private ThinkingDotsController thinkingDots;
 
     private void Awake()
     {
@@ -45,6 +47,7 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.OnNewBattle += Initialize;
         GameManager.OnUpdateRound += UpdateRound;
         GameManager.OnUpdatePlayerCP += UpdatePlayerCP;
         GameManager.OnUpdateEnemyCP += UpdateEnemyCP;
@@ -52,6 +55,7 @@ public class UIManager : MonoBehaviour
         GameManager.OnUpdatePlayerDisplayName += UpdatePlayerDisplayName;
         GameManager.OnWin += ShowWinUI;
         GameManager.OnLose += ShowLoseUI;
+        GameManager.OnEndTurn += thinkingDots.SwitchPosition;
 
         GridManager.OnAbilityPreview += EnableAbilityPreviewUI;
         GridManager.OnAbilityActivate += DisableAbilityPreviewUI;
@@ -60,6 +64,7 @@ public class UIManager : MonoBehaviour
 
     private void OnDisable()
     {
+        GameManager.OnNewBattle -= Initialize;
         GameManager.OnUpdateRound -= UpdateRound;
         GameManager.OnUpdatePlayerCP -= UpdatePlayerCP;
         GameManager.OnUpdateEnemyCP -= UpdateEnemyCP;
@@ -67,6 +72,7 @@ public class UIManager : MonoBehaviour
         GameManager.OnUpdatePlayerDisplayName -= UpdatePlayerDisplayName;
         GameManager.OnWin -= ShowWinUI;
         GameManager.OnLose -= ShowLoseUI;
+        GameManager.OnEndTurn -= thinkingDots.SwitchPosition;
 
 
         GridManager.OnAbilityPreview -= EnableAbilityPreviewUI;
@@ -74,11 +80,12 @@ public class UIManager : MonoBehaviour
         GridManager.OnAbilityCancel -= DisableAbilityPreviewUI;
     }
 
-    private void Start()
+    private void Initialize()
     {
-        dialogueBoxBackDrop.SetActive(false); 
-        restartButton.gameObject.SetActive(false); 
+        dialogueBoxBackDrop.SetActive(false);
+        restartButton.gameObject.SetActive(false);
         continueButton.gameObject.SetActive(false);
+        thinkingDots.Initialize();
     }
 
     public void EnableDialogueUI()
@@ -128,15 +135,33 @@ public class UIManager : MonoBehaviour
         enemyCPText.text = i.ToString();
     }
 
+    public void UpdatePlayerCharacterPortrait(Sprite sprite)
+    {
+        playerCharacterPortrait.sprite = sprite;
+    }
+
     private void ShowLoseUI()
     {
+        thinkingDots.gameObject.SetActive(false);
         roundText.text = "Defeat!";
         restartButton.gameObject.SetActive(true);
     }
 
     private void ShowWinUI()
     {
-        roundText.text = "Victory!";
-        continueButton.gameObject.SetActive(true);
+       
+        thinkingDots.gameObject.SetActive(false);
+        
+        if (GameManager.Instance.currentBattle < GameManager.Instance.TotalBattles)
+        {
+            roundText.text = "Victory!";
+            continueButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            roundText.text = "Ultimate Victory!";
+            restartButton.gameObject.SetActive(true);
+        }
+
     }
 }

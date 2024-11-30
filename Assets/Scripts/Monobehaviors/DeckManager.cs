@@ -21,7 +21,7 @@ public class DeckManager : MonoBehaviour
 
     [Header("All Abilities")]
     [SerializeField] List<AbilitySO> allAbilities = new List<AbilitySO>();
-    [SerializeField] private List<AbilitySO> playerDeck = new List<AbilitySO>();
+    private List<AbilitySO> playerDeck = new List<AbilitySO>();
     private List<AbilitySO> playerHand = new List<AbilitySO>();
     private List<AbilitySO> playerDiscardPile = new List<AbilitySO>();
     public List<AbilitySO> AllAbilities => allAbilities;
@@ -56,6 +56,7 @@ public class DeckManager : MonoBehaviour
         GridManager.OnAbilityCancel += UnlockhandInteraction;
 
         GameManager.OnEndTurn += DrawNewHand;
+        GameManager.OnNewBattle += InitializeHand;
     }
 
     private void OnDisable()
@@ -65,27 +66,29 @@ public class DeckManager : MonoBehaviour
         GridManager.OnAbilityCancel -= UnlockhandInteraction;
 
         GameManager.OnEndTurn -= DrawNewHand;
+        GameManager.OnNewBattle -= InitializeHand;
     }
 
-    private void Start()
-    {
-        InitializeHand();
-        DrawNewHand();
-    }
-
-    // Subscribe this to GameManager.OnBeginRound when it is implemented
     private void InitializeHand()
     {
-        Card newCard;
-        hand = new Card[maxHandSize];
-
-        for(int i = 0; i < maxHandSize; i++)
+        if(hand != null)
         {
-            newCard = Instantiate(cardPrefab, cardsParent);
-            newCard.Initialize(this);
-            newCard.gameObject.SetActive(false);
-            hand[i] = newCard;
+            RecycleDeck();
         }
+        else
+        {
+            Card newCard;
+            hand = new Card[maxHandSize];
+
+            for (int i = 0; i < maxHandSize; i++)
+            {
+                newCard = Instantiate(cardPrefab, cardsParent);
+                newCard.Initialize(this);
+                newCard.gameObject.SetActive(false);
+                hand[i] = newCard;
+            }
+        }
+        DrawNewHand();
     }
 
     private Card GetCard()
@@ -197,8 +200,18 @@ public class DeckManager : MonoBehaviour
         playerDiscardPile.Add(card.assignedAbility);
     }
 
+    public void AddToDeck(AbilitySO ability, int amount)
+    {
+        for(int i = 0; i < amount - 1; i++)
+        {
+            playerDeck.Add(ability);
+        }
+    }
+
     private void RecycleDeck()
     {
+        if (playerDiscardPile.Count < 1) return;
+
         AbilitySO randomDiscardedAbility;
         for (int i = 0; i < playerDiscardPile.Count; i++)
         {

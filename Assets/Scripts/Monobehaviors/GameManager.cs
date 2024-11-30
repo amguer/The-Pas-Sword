@@ -11,10 +11,11 @@ public class GameManager : MonoBehaviour
     public static Action<string> OnUpdatePlayerDisplayName;
     public static Action<int> OnUpdateEnemyCP;
     public static Action<string> OnUpdateEnemyDisplayName;
-    public static Action OnBeginGame;
     public static Action OnEndTurn;
+    public static Action OnNewBattle;
     public static Action OnLose;
     public static Action OnWin;
+    public static Action OnGameWin;
 
     public int roundNum { get; private set; }
     public int playerCP { get; private set; }
@@ -29,7 +30,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] int defaultPlayerCP = 100;
     [SerializeField] string defaultPlayerName = string.Empty;
     [SerializeField] int defaultEnemyCP = 100;
-    [SerializeField] string defaultEnemyName = string.Empty;
+    [SerializeField] int totalBattles = 5;
+    public int currentBattle { get; private set; }
+    public int TotalBattles => totalBattles;
 
     private void Awake()
     {
@@ -44,10 +47,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void NewBattle()
     {
+        if(currentBattle >= totalBattles)
+        {
+            currentBattle = 0; 
+        }
+        currentBattle++;
+
+        OnNewBattle?.Invoke();
         InitializeGameStats();
-        OnBeginGame?.Invoke();
     }
 
     public void EndTurn()
@@ -77,10 +86,6 @@ public class GameManager : MonoBehaviour
         if(defaultPlayerName != string.Empty)
         {
             SetPlayerName(defaultPlayerName);
-        }
-        if(defaultEnemyName != string.Empty)
-        {
-            SetEnemyName(defaultEnemyName);
         }
         OnUpdateRound?.Invoke(roundNum);
         OnUpdatePlayerCP?.Invoke(playerCP);

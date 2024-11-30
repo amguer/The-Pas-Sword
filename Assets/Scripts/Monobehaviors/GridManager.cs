@@ -46,6 +46,16 @@ public class GridManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        GameManager.OnNewBattle += ResetGrid;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnNewBattle -= ResetGrid;
+    }
+
     private void Start()
     {
         InitializeGrid();
@@ -117,6 +127,28 @@ public class GridManager : MonoBehaviour
                 newCell.SetColors(CellState.Default);
                 newCell.currentCellState = CellState.Default;
                 cells.Add(newCell);
+            }
+        }
+    }
+
+    private void ResetGrid()
+    {
+        int cellsCount = cells.Count;
+        int j = 0;
+
+        for (int h = 0; h < cellsCount; h++)
+        {
+            cells[h].InitializeCell(this);
+            cells[h].isInteractable = false;
+            if (j > gridChars.Length)
+                cells[h].AssignCharacter(string.Empty);
+            else
+                cells[h].AssignCharacter(gridChars[j++].ToString());
+            cells[h].SetColors(CellState.Default);
+            cells[h].currentCellState = CellState.Default;
+            if (cells[h].isLocked)
+            {
+                cells[h].Unlock();
             }
         }
     }
