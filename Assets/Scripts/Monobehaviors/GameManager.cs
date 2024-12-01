@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] EnemyAIManager enemyAI;
     [SerializeField] int defaultPlayerCP = 100;
-    [SerializeField] string defaultPlayerName = string.Empty;
     [SerializeField] int defaultEnemyCP = 100;
     [SerializeField] int totalBattles = 5;
     public int currentBattle { get; private set; }
@@ -83,10 +82,6 @@ public class GameManager : MonoBehaviour
         playerCP = defaultPlayerCP;
         enemyCP = defaultEnemyCP;
         currentInstigator = Instigator.Player;
-        if(defaultPlayerName != string.Empty)
-        {
-            SetPlayerName(defaultPlayerName);
-        }
         OnUpdateRound?.Invoke(roundNum);
         OnUpdatePlayerCP?.Invoke(playerCP);
         OnUpdateEnemyCP?.Invoke(enemyCP);

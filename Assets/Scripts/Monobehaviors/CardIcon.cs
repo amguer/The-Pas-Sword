@@ -9,10 +9,7 @@ using UnityEngine.UI;
 public class CardIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public AbilitySO assignedAbility { get; private set; }
-    private RectTransform rectTransform;
     [SerializeField] private Animator animator;
-    [SerializeField] private float hoverScale;
-    [SerializeField] private float hoverDistance;
     [SerializeField] private TextMeshProUGUI nameTextBox;
     [SerializeField] private TextMeshProUGUI descriptionTextBox;
     [SerializeField] private TextMeshProUGUI cpCostTextBox;
@@ -20,7 +17,7 @@ public class CardIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private Image iconImage;
     [SerializeField] private Image patternTypeImage;
     [SerializeField] private Image highlightImage;
-    public bool isInteractable;
+    public bool isInteractable = true;
 
     public void LoadAbility(AbilitySO ability)
     {
@@ -38,6 +35,7 @@ public class CardIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (!isInteractable) return;
 
+        highlightImage.gameObject.SetActive(true);
         animator.SetBool("CardShake", true);
     }
 
@@ -52,6 +50,7 @@ public class CardIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (!isInteractable) return;
 
+        highlightImage.gameObject.SetActive(false);
         animator.SetBool("CardShake", false);
     }
 }

@@ -5,14 +5,15 @@ using UnityEngine.XR;
 
 public class DraftScreenController : MonoBehaviour
 {
-    [SerializeField] List<Card> draftOptions;
-
+    [SerializeField] List<CardIcon> draftOptions;
     public void Refresh()
     {
         DeckManager deckManager = DeckManager.Instance;
-        AbilitySO newAbility = deckManager.GetAnyRandomAbility();
+        AbilitySO newAbility;
         for (int i = 0; i < draftOptions.Count; i++)
         {
+            newAbility = deckManager.GetAnyRandomAbility();
+
             while (newAbility == draftOptions[i].assignedAbility)
             {
                 newAbility = deckManager.GetAnyRandomAbility();

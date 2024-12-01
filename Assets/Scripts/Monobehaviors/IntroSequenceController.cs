@@ -6,6 +6,7 @@ using TMPro;
 
 public class IntroSequenceController : MonoBehaviour
 {
+    [SerializeField] GameObject combatScreen;
     [SerializeField] GameObject nameScreen;
     [SerializeField] TextMeshProUGUI playerNameInput;
     [SerializeField] TextMeshProUGUI noteText;
@@ -54,11 +55,16 @@ public class IntroSequenceController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         thinkingDots.SetActive(false);
         draftScreen.gameObject.SetActive(true);
-        for(int i = 0; i < 2; i++)
-        {
-            draftScreen.Refresh();
-            yield return new WaitUntil(() => pickedCard == true);
-        }
+        draftScreen.Refresh();
+        yield return new WaitUntil(() => DeckManager.Instance.PlayerDeck.Count > 2);
+        draftScreen.Refresh();
+        yield return new WaitUntil(() => DeckManager.Instance.PlayerDeck.Count > 5);
+        draftScreen.Refresh();
+        yield return new WaitUntil(() => DeckManager.Instance.PlayerDeck.Count > 8);
+        draftScreen.gameObject.SetActive(false);
+        combatScreen.SetActive(true);
+        GameManager.Instance.NewBattle();
+        StartFadeIn();
     }
 
     public void ChooseSprite(Sprite sprite)

@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button cancelButton;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button continueButton;
+    [SerializeField] private Button endTurnButton;
     [SerializeField] private ThinkingDotsController thinkingDots;
 
     private void Awake()
@@ -85,6 +86,7 @@ public class UIManager : MonoBehaviour
         dialogueBoxBackDrop.SetActive(false);
         restartButton.gameObject.SetActive(false);
         continueButton.gameObject.SetActive(false);
+        endTurnButton.gameObject.SetActive(false);
         thinkingDots.Initialize();
     }
 
@@ -113,6 +115,14 @@ public class UIManager : MonoBehaviour
     private void UpdateRound(int num)
     {
         roundText.text = $"Round {num}";
+        if(GameManager.Instance.currentInstigator == Instigator.Player)
+        {
+            endTurnButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            endTurnButton.gameObject.SetActive(false);
+        }
     }
 
     private void UpdatePlayerDisplayName(string name)

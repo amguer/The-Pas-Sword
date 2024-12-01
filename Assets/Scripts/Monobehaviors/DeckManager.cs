@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Playables;
 using UnityEngine;
 
 public class DeckManager : MonoBehaviour
@@ -25,6 +24,7 @@ public class DeckManager : MonoBehaviour
     private List<AbilitySO> playerHand = new List<AbilitySO>();
     private List<AbilitySO> playerDiscardPile = new List<AbilitySO>();
     public List<AbilitySO> AllAbilities => allAbilities;
+    public List<AbilitySO> PlayerDeck => playerDeck;
 
     [Header("Cards")]
     [SerializeField] private Card cardPrefab;
@@ -33,7 +33,6 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private float handPixelHeight;
     [SerializeField] private float handCurveAngle ;
 
-    
     private Card[] hand;
 
     private void Awake()
@@ -202,7 +201,7 @@ public class DeckManager : MonoBehaviour
 
     public void AddToDeck(AbilitySO ability, int amount)
     {
-        for(int i = 0; i < amount - 1; i++)
+        for(int i = 0; i < amount; i++)
         {
             playerDeck.Add(ability);
         }
